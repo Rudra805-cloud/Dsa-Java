@@ -18,6 +18,11 @@ public class HashingusingMap {
             // map[arr[i]]++;  =>in cpp
         
         }
+        //itrate in map
+          for(Map.Entry<Integer, Integer> e : map.entrySet()){
+                System.out.println(e.getKey()+"->"+e.getValue());
+                
+          }
           
 
 

@@ -1,3 +1,4 @@
+import java.util.Map;
 import java.util.Scanner;
 
 public class HashingofChar {
@@ -12,6 +13,7 @@ public class HashingofChar {
         for(int i=0;i<s.length();i++){
             hash[s.charAt(i)]++;
         }
+        //iterator in map
         int q=sc.nextInt();
         while (q>0) {
             char ch=sc.next().charAt(0);
