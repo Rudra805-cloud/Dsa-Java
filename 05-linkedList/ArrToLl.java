@@ -31,21 +31,42 @@ public class ArrToLl {
     public static void main(String[] args) {
         int arr[] = { 12, 15, 14, 16 };
         Node head =ArrToL(arr);
-       // System.out.println(head.data);
+        
+       //Insertion of  Element in Linked list
+        head= AddElement(30,head,1);
+     // System.out.println(head.data);
         Traversal(head);
+       
+       
     }
 //Traversal in a node.......................................
 static void Traversal(Node head){
     Node temp=head;
-    while (temp!=null) {
-      
+    while(temp!=null) {
         System.out.println(temp.data);
              temp=temp.Next;    
     }
-    
-
 }
 
+//iNSERT ELEMENT
+public static Node AddElement(int data,Node head,int pos){
+     Node element=new Node(data);
+     if (pos==0){
+        element.Next=head;
+        
+        return element;
+     }
+     Node pre=head;
+     for(int i=0;i<pos-1;i++){
+          pre=pre.Next;                                                   
+     }
+     element.Next=pre.Next;
+     pre.Next=element;
+     
+     return head;
 }
+}
+
+
 
 
